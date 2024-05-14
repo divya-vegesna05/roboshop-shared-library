@@ -85,7 +85,7 @@ pipeline{
     stage("Deploytodev")
     {
        when {
-           $params.deploy
+           $params.deploy == 'true'
         }
         steps{
              script{
