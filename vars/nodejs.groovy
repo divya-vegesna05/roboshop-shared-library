@@ -1,3 +1,4 @@
+def call(Map configmap) {
 pipeline{
     agent{
          node {
@@ -37,4 +38,5 @@ post {
             echo 'I will always say success!'
         }
     }
+}
 }
