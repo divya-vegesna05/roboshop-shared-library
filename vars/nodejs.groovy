@@ -71,7 +71,7 @@ pipeline{
                            nexusUrl: "${pipelineglobals.nexus_url()}",
                             groupId: 'com.roboshop',
                             version: "${package_version}",
-                            repository: '${configmap.component}',
+                            repository: "${configmap.component}",
                             credentialsId: 'nexus-id',
                              artifacts: [
                                [artifactId: "${configmap.component}",
