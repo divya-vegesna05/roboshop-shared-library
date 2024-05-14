@@ -86,7 +86,7 @@ pipeline{
     {
        when {
            expression{
-           $params.Deploy
+           params.Deploy
         }
        }
         steps{
