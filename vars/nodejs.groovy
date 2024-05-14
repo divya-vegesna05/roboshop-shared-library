@@ -82,21 +82,21 @@ pipeline{
                             )
                          }        
          } 
-    // stage("Deploytodev")
-    // {
-    //    when {
-    //        $params.deploy
-    //     }
-    //     steps{
-    //          script{
-    //             def params = [
-    //      string(name: 'version', value: "${package_version}"),
-    //      string(name: 'environment', value: "dev")
-    //             ]
-    //     build job: "../catalogue-deploy", parameters: params
-    //     }  
-    //      }
-    // }
+    stage("Deploytodev")
+    {
+       when {
+           $params.deploy
+        }
+        steps{
+             script{
+                def params = [
+         string(name: 'version', value: "${package_version}"),
+         string(name: 'environment', value: "dev")
+                ]
+        build job: "../catalogue-deploy", parameters: params
+        }  
+         }
+    }
     }
  post { 
         always { 
